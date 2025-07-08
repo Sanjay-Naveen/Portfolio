@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sanjay Naveen | Web Developer</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600;800&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to right, #e0f7fa, #f1f8e9);
+      color: #222;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 60px;
+      background-color: #ffffff;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+
+    .logo {
+      font-size: 24px;
+      font-weight: 800;
+      color: #00695c;
+    }
+
+    nav a {
+      margin: 0 15px;
+      text-decoration: none;
+      color: #333;
+      font-weight: 500;
+    }
+
+    nav a:hover {
+      color: #00695c;
+    }
+
+    .btn-talk {
+      background-color: #004d40;
+      color: white;
+      padding: 8px 16px;
+      border: none;
+      border-radius: 25px;
+      font-weight: 600;
+      cursor: pointer;
+    }
+
+    .hero {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 60px;
+      flex-wrap: wrap;
+    }
+
+    .hero-text {
+      flex: 1;
+      max-width: 600px;
+    }
+
+    .hero-text h1 {
+      font-size: 3em;
+      color: #004d40;
+    }
+
+    .hero-text p {
+      margin-top: 20px;
+      font-size: 1.1em;
+      color: #444;
+    }
+
+    .buttons {
+      margin-top: 30px;
+    }
+
+    .buttons button {
+      padding: 10px 20px;
+      margin-right: 15px;
+      border: none;
+      border-radius: 25px;
+      font-weight: 600;
+      cursor: pointer;
+    }
+
+    .learn {
+      background-color: #00796b;
+      color: white;
+    }
+
+    .hire {
+      background-color: #e0f2f1;
+      color: #004d40;
+    }
+
+    .profile {
+      flex: 1;
+      text-align: center;
+    }
+
+    .profile-img {
+      width: 280px;
+      height: 280px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 8px solid #e0f2f1;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+      position: relative;
+      transition: all 0.3s ease-in-out;
+    }
+
+    .profile-img:hover {
+      transform: scale(1.03);
+      cursor: pointer;
+    }
+
+    input[type="file"] {
+      display: none;
+    }
+
+    @media (max-width: 768px) {
+      .hero {
+        flex-direction: column;
+        padding: 30px;
+      }
+      .hero-text h1 {
+        font-size: 2em;
+        text-align: center;
+      }
+      .buttons {
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">SANJAY NAVEEN</div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="projects.html">Projects</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <button class="btn-talk">Let's Talk</button>
+  </header>
+
+  <section class="hero">
+    <div class="hero-text">
+      <h1>Hey! I am <br> Web Developer</h1>
+      <p>I'm Sanjay Naveen, a passionate and curious engineering student based in Coimbatore, originally from Tirunelveli. While Web Development is one of my core strengths, my interests go far beyond that.
+
+I explore multiple domains including Full-Stack Development, Artificial Intelligence, Natural Language Processing, and software automation. I enjoy building impactful projects — whether it's a smart web application, an AI-powered tool, or a backend automation system.
+
+My goal is to blend creativity with technical skills to solve real-world problems. I believe in continuous learning and applying what I learn through hands-on projects and collaboration.</p>
+      <div class="buttons">
+        
+      </div>
+    </div>
+
+    <div class="profile">
+      <label for="uploadImg">
+        <img src="WhatsApp Image 2025-07-08 at 11.51.04_477ea116.jpg" alt="Profile" id="profilePic" class="profile-img"/>
+      </label>
+      <input type="file" id="uploadImg" accept="image/*" onchange="changeImage(event)">
+    </div>
+  </section>
+
+  <script>
+    function changeImage(event) {
+      const file = event.target.files[0];
+      if (file) {
+        const reader = new FileReader();
+        reader.onload = function(e) {
+          document.getElementById('profilePic').src = e.target.result;
+          localStorage.setItem("profileImage", e.target.result); // Save image in local storage
+        };
+        reader.readAsDataURL(file);
+      }
+    }
+
+    // Load stored image on refresh
+    window.onload = () => {
+      const savedImage = localStorage.getItem("profileImage");
+      if (savedImage) {
+        document.getElementById('profilePic').src = savedImage;
+      }
+    };
+  </script>
+
+</body>
+</html>
