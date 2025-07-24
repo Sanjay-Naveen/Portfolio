@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Projects | Sanjay Naveen</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background-color: #f5f7fa;
+      padding: 20px;
+      color: #333;
+    }
+
+    header {
+      background-color: #ffffff;
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    header nav a {
+      margin: 0 15px;
+      text-decoration: none;
+      color: #333;
+      font-weight: 500;
+    }
+
+    header nav a:hover {
+      color: #00796b;
+    }
+
+    h1 {
+      font-size: 2.5em;
+      margin: 30px 0;
+      color: #004d40;
+      text-align: center;
+    }
+
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+      padding: 0 20px;
+    }
+
+    .card {
+      background: white;
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+      transition: transform 0.2s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card h3 {
+      color: #00796b;
+      margin-bottom: 10px;
+    }
+
+    .card p {
+      font-size: 0.95em;
+      line-height: 1.6;
+      color: #444;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 40px;
+      color: #777;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div><strong>Sanjay Naveen</strong></div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="projects.html">Projects</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <h1>My Projects</h1>
+
+  <section class="projects">
+    <div class="card">
+      <h3>Smart Blood Donation Request System</h3>
+      <p>
+        Built using Flask and MongoDB, this system allows blood donation requests to be handled efficiently with automated email notifications, donor filtering by blood type, and real-time updates. Ideal for college or institutional use.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>AI-Powered Medical Summarization Assistant (Mini Project)</h3>
+      <p>
+        Developed a smart assistant using Python, Streamlit, and MongoDB that summarizes medical records in real-time. Includes AI for auto-formatting, tracking patient history, and providing clean summaries.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>Personal Portfolio Website</h3>
+      <p>
+        A responsive and professional personal portfolio built with HTML, CSS, and JavaScript to showcase projects, skills, and education. Includes image upload, modern layout, and deployable on GitHub Pages.
+      </p>
+    </div>
+
+    <div class="card">
+  <h3>Personal Finance Assistant</h3>
+  <p>
+    A React-based financial planning tool that predicts when users can achieve goals like buying a car or house based on their salary and expenses. Includes live calculations, goal tracking, and an AI assistant that suggests better savings paths with real-time insights.
+  </p>
+</div>
+
+  </section>
+
+  <footer>
+    &copy; 2025 Sanjay Naveen. All rights reserved.
+  </footer>
+
+</body>
+</html>

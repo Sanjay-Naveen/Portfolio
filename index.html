@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sanjay Naveen | Web Developer</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background: linear-gradient(to right, #f5f7fa, #e0f2f1);
+      color: #333;
+      min-height: 100vh;
+    }
+
+    header {
+      background-color: #ffffff;
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    header nav a {
+      margin: 0 15px;
+      text-decoration: none;
+      color: #333;
+      font-weight: 500;
+    }
+
+    header nav a:hover {
+      color: #00796b;
+    }
+
+    .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 60px 10%;
+      flex-wrap: wrap;
+    }
+
+    .left {
+      flex: 1;
+      max-width: 600px;
+    }
+
+    .left h1 {
+      font-size: 3em;
+      color: #004d40;
+      margin-bottom: 15px;
+    }
+
+    .left p {
+      font-size: 1.1em;
+      line-height: 1.6;
+      color: #444;
+    }
+
+    .right {
+      flex: 1;
+      text-align: center;
+    }
+
+    .profile-img {
+      width: 300px;
+      height: 300px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 5px solid #00796b;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    }
+
+    @media(max-width: 768px) {
+      .container {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .left, .right {
+        flex: unset;
+        width: 100%;
+      }
+
+      .profile-img {
+        width: 200px;
+        height: 200px;
+        margin-top: 30px;
+      }
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 14px;
+      color: #777;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div><strong>Sanjay Naveen</strong></div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="projects.html">Projects</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <div class="container">
+    <div class="left">
+      <h1>Hello, I'm Sanjay</h1>
+      <p>
+        I'm Sanjay Naveen — a passionate engineer and full-stack web developer based in Coimbatore.
+        I specialize in creating clean, responsive, and user-focused web applications. I also explore AI, automation, and smart systems, always looking to build tech that solves real-world problems.
+        Driven by curiosity and purpose, I turn ideas into impactful digital experiences through code and design.
+      </p>
+    </div>
+    <div class="right">
+    <img src="https://res.cloudinary.com/dtjjgiitl/image/upload/q_auto:good,f_auto,fl_progressive/v1753187483/q3brzf5iasksijvawckn.jpg" alt="Sanjay Naveen" class="profile-img">
+    </div>
+  </div>
+
+  <footer>
+    &copy; 2025 Sanjay Naveen. All rights reserved.
+  </footer>
+
+</body>
+</html>
